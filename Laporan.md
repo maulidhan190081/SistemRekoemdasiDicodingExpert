@@ -120,10 +120,8 @@ Dapat dilihat bahwa tidak ada satupun rekomendasi film yang sama untuk *user* de
 2. **Discounted Cumulative Gain (DCG)**: Memberikan "diskon" atau penurunan nilai relevansi untuk item yang muncul di posisi lebih bawah dalam daftar. Hal ini karena hasil yang muncul lebih tinggi dianggap lebih penting. Rumus *DCG* biasanya mengalikan relevansi item dengan faktor diskonto (sering kali menggunakan logaritma dari posisi item).
 
 3. **Normalized DCG (NDCG)**: Untuk menghindari bias terhadap panjang daftar atau dataset tertentu, *NDCG* membandingkan nilai *DCG* yang diperoleh dengan nilai ideal *DCG* (IDCG), yaitu *DCG* yang dihasilkan jika hasil pencarian diurutkan dengan relevansi tertinggi. *NDCG* dihitung sebagai:
-   $$
-   \text{NDCG}_k = \frac{\text{DCG}_k}{\text{IDCG}_k}
-   $$
-
+![Gambar 1.3](Gambar/ndcg.png)  
+*Gambar 1.3*
    Di mana \( k \) adalah posisi pada daftar hasil yang ingin dievaluasi. Nilai *NDCG* berkisar antara 0 dan 1, di mana 1 menunjukkan hasil yang optimal.
 
 
