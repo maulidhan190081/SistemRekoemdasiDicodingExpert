@@ -106,7 +106,7 @@ Matriks yang digunakan untuk membandingkan kinerja dari kedua skenario tersebut 
 
 Pada Gambar 1.1 dapat dilihat bahwa garis biru menunjukkan nilai *NDCG* metode *SVD+UB*, sedangkan garis orange menunjukkan nilai *NDCG* metode UB (tanpa *SVD*). Dapat dilihat bahwa di semua user yang memperoleh rekomendasi, metode *SVD+UB* memiliki nilai *NDCG* yang lebih baik dibandingkan dengan UB (tanpa *SVD*). 
 
-Hal ini menunjukkan bahwa metode *SVD* dengan mengubah data menjadi 3 matriks dengan nilai laten mampu menyelesaikan masalah *sparsity* dan *scalability*. Hal ini berati juga sudah menjawab *Problem Statements*, mencapai *Goals* yang diinginkan serta *Solution Statements* yang diberikan mampu berdampak lebih baik.
+Hal ini menunjukkan bahwa metode *SVD* dengan mengubah data menjadi 3 matriks dengan nilai laten mampu menyelesaikan masalah *sparsity* dan *scalability*. Hal ini berati juga sudah menjawab *Problem Statements*, mencapai *Goals* yang diinginkan serta *Solution Statements* yang diberikan mampu berdampak lebih baik pada permasalah sparsity* dan *scalability*.
 
 **Hasil Rekomendasi**
 
