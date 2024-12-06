@@ -49,7 +49,9 @@ Tujuan dari proyek ini adalah:
 - Solusi yang ditawarkan adalah dengan menyeleksi *user* yang dianggap mampu mewakili dalam hal merekomendasikan film.
 
 ## Data Understanding
-Data yang digunakan adalah data review film dari *Netflix* dan daftar film yang bisa diunduh pada link berikut [Data Rating Film](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data). Data berisi *User_ID*, *Rating*, *Movie_ID*, *Year*, dan *Name*. Jumlah rating sebanyak 17 juta dengan rating dari 1-5.
+Data yang digunakan adalah data review film dari *Netflix* dan daftar film yang bisa diunduh pada link berikut [Data Rating Film](https://www.kaggle.com/datasets/rishitjavia/netflix-movie-rating-dataset?select=Netflix_Dataset_Rating.csv). Data berisi variabel *User_ID*, *Rating*, *Movie_ID*. Adapaun data yang digunakan untuk melihat judul dan tahun film dirilis yang bisa diunduh pada link berikut [Data List Film](https://www.kaggle.com/datasets/rishitjavia/netflix-movie-rating-dataset?select=Netflix_Dataset_Movie.csv?). Data berisi variabel *Year*, dan *Name*. 
+
+Jumlah rating sebanyak 17 juta dengan rating dari 1-5. Jumlah *user* sebanyak 143k dengan range id dari 6 - 2,6 juta (*User_ID* tidak urut). Terdapat beberapa film yang belum diberikan rating oleh *user* (Hal ini yang menjadi masalah yaitu *Sparsity*). Fitur-fitur yang ada pada data akan diuraikan sebagai berikut.
   
 
 ### Variabel-variabel pada *Reviews Film Netflix* dataset adalah sebagai berikut:
@@ -68,9 +70,11 @@ Data yang digunakan adalah data review film dari *Netflix* dan daftar film yang 
 ## Data Preparation
 Untuk memperoleh data yang baik maka diperlukan beberapa tahap sebelum melakukan proses *modelling*. Berikut beberapa tahapan yang dilakukan
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
+**Tahapan Preparation**:
 - Melakukan seleksi terhadap *user* yang telah mereview lebih dari sama dengan 400 film 
 - Melakukan pembagian data (80% Data *Training* dan 20% Data *Testing*) menggunakan `train_test_split`
+- Membuat matriks variabel `matrix`dengan menggunakan `train_data.pivot_table`
+- Membuat matriks variabel `R` yang hanya berisi nilai rating dengan menggunakan `matrix.values`
 
 ## Modeling
 
@@ -100,7 +104,9 @@ Matriks yang digunakan untuk membandingkan kinerja dari kedua skenario tersebut 
 ![Gambar 1.1](Gambar/download.png)  
 *Gambar 1.1*
 
-Pada Gambar 1.1 dapat dilihat bahwa garis biru menunjukkan nilai *NDCG* metode *SVD+UB*, sedangkan garis orange menunjukkan nilai *NDCG* metode UB (tanpa *SVD*). Dapat dilihat bahwa di semua user yang memperoleh rekomendasi, metode *SVD+UB* memiliki nilai *NDCG* yang lebih baik dibandingkan dengan UB (tanpa *SVD*). Hal ini menunjukkan bahwa *SVD* mampu menyelesaikan masalah *sparsity* dan *scalability*.
+Pada Gambar 1.1 dapat dilihat bahwa garis biru menunjukkan nilai *NDCG* metode *SVD+UB*, sedangkan garis orange menunjukkan nilai *NDCG* metode UB (tanpa *SVD*). Dapat dilihat bahwa di semua user yang memperoleh rekomendasi, metode *SVD+UB* memiliki nilai *NDCG* yang lebih baik dibandingkan dengan UB (tanpa *SVD*). 
+
+Hal ini menunjukkan bahwa metode *SVD* dengan mengubah data menjadi 3 matriks dengan nilai laten mampu menyelesaikan masalah *sparsity* dan *scalability*. Hal ini berati juga sudah menjawab *Problem Statements*, mencapai *Goals* yang diinginkan serta *Solution Statements* yang diberikan mampu berdampak lebih baik.
 
 **Hasil Rekomendasi**
 
