@@ -49,7 +49,7 @@ Tujuan dari proyek ini adalah:
 - Solusi yang ditawarkan adalah dengan menyeleksi *user* yang dianggap mampu mewakili dalam hal merekomendasikan film.
 
 ## Data Understanding
-Data yang digunakan adalah data review film dari *Netflix* dan daftar film yang bisa diunduh pada link berikut [Data Rating Film](https://www.kaggle.com/datasets/rishitjavia/netflix-movie-rating-dataset?select=Netflix_Dataset_Rating.csv). Data berisi variabel *User_ID*, *Rating*, *Movie_ID*. Adapaun data yang digunakan untuk melihat judul dan tahun film dirilis yang bisa diunduh pada link berikut [Data List Film](https://www.kaggle.com/datasets/rishitjavia/netflix-movie-rating-dataset?select=Netflix_Dataset_Movie.csv?). Data berisi variabel *Year*, dan *Name*. 
+Data yang digunakan adalah data review film dari *Netflix* dan daftar film yang bisa diunduh pada link berikut [Data Rating Film](https://www.kaggle.com/datasets/rishitjavia/netflix-movie-rating-dataset?select=Netflix_Dataset_Rating.csv). Data berisi variabel *User_ID*, *Rating*,dan  *Movie_ID*. Adapaun data yang digunakan untuk melihat judul dan tahun film dirilis yang bisa diunduh pada link berikut [Data List Film](https://www.kaggle.com/datasets/rishitjavia/netflix-movie-rating-dataset?select=Netflix_Dataset_Movie.csv?). Data berisi variabel *Movie_ID*, *Year*, dan *Name*. 
 
 Jumlah rating sebanyak 17 juta dengan rating dari 1-5. Jumlah *user* sebanyak 143k dengan range id dari 6 - 2,6 juta (*User_ID* tidak urut). Terdapat beberapa film yang belum diberikan rating oleh *user* (Hal ini yang menjadi masalah yaitu *Sparsity*). Fitur-fitur yang ada pada data akan diuraikan sebagai berikut.
   
