@@ -76,9 +76,12 @@ Untuk memperoleh data yang baik maka diperlukan beberapa tahap sebelum melakukan
 - Membuat matriks variabel `matrix`dengan menggunakan `train_data.pivot_table`
 - Membuat matriks variabel `R` yang hanya berisi nilai rating dengan menggunakan `matrix.values`
 
-## Modeling
+## Modeling and Results
 
 Metode yang digunakan untuk menyelesaikan masalah *sparsity* dan *scalability* adalah dengan menggunakan metode *SVD+UB*. Metode ini akan dibandingkan dengan metode UB (tanpa SVD). Tujuannya adalah untuk melihat apakah *SVD* dapat menyelesaikan masalah *sparsity* dan *scalability*.
+
+
+**SVD**
 
 *SVD* digunakan untuk memprediksi preferensi *user* berdasarkan matriks interaksi, seperti matriks rating yang menunjukkan seberapa suka *user* terhadap item tertentu. Proses *SVD* memecah matriks rating menjadi tiga matriks: matriks *user* (*U*), matriks item (*Vt*), dan matriks diagonal nilai singular yang menggambarkan kekuatan hubungan antara *user* dan item. Dengan memfaktorkan matriks ini, *SVD* memungkinkan sistem untuk menangkap pola tersembunyi, seperti kesamaan preferensi antar *user* atau antar item, sehingga dapat memprediksi rating yang belum diberikan dan menghasilkan rekomendasi yang lebih akurat. Teknik ini juga sering digunakan dalam pendekatan *collaborative filtering* ([Koren, 2008](https://doi.org/10.1145/1289913.1289918); [Chen & Zhao, 2014](https://doi.org/10.4236/jsea.2014.710087)).
 
@@ -95,7 +98,7 @@ Metode yang digunakan untuk menyelesaikan masalah *sparsity* dan *scalability* a
 
 Pemilihan metode *SVD* didasarkan pada penelitian sebelumnya yang menyatakan bahwa masalah *sparsity* dan *scalability* dapat diselesaikan dengan metode *SVD* ([Zhou et al., 2017](https://ieeexplore.ieee.org/document/8325026)).
 
-## Evaluation
+**NDCG**
 
 Matriks yang digunakan untuk membandingkan kinerja dari kedua skenario tersebut adalah matriks *NDCG*. Matriks *NDCG* adalah matriks yang menghitung akurasi dari rekomendasi yang dihasilkan oleh kedua skenario. Semakin tinggi nilai *NDCG*-nya, maka semakin baik metode yang digunakan.
 
@@ -107,6 +110,8 @@ Matriks yang digunakan untuk membandingkan kinerja dari kedua skenario tersebut 
 Pada Gambar 1.1 dapat dilihat bahwa garis biru menunjukkan nilai *NDCG* metode *SVD+UB*, sedangkan garis orange menunjukkan nilai *NDCG* metode UB (tanpa *SVD*). Dapat dilihat bahwa di semua user yang memperoleh rekomendasi, metode *SVD+UB* memiliki nilai *NDCG* yang lebih baik dibandingkan dengan UB (tanpa *SVD*). 
 
 Hal ini menunjukkan bahwa metode *SVD* dengan mengubah data menjadi 3 matriks dengan nilai laten mampu menyelesaikan masalah *sparsity* dan *scalability*. Hal ini berati juga sudah menjawab *Problem Statements*, mencapai *Goals* yang diinginkan serta *Solution Statements* yang diberikan mampu berdampak lebih baik pada permasalah sparsity* dan *scalability*.
+
+## Evaluation
 
 **Hasil Rekomendasi**
 
