@@ -100,10 +100,10 @@ Pemilihan metode *SVD* didasarkan pada penelitian sebelumnya yang menyatakan bah
 
 **Hasil Rekomendasi**
 
-Dengan menggunakan skenario yang berbeda dan menghasilkan nilai NDCG yang berbeda tentunya menghasilkan rekomendasi yang berbeda pula. Hasil dari rekomendasi dapat dilihat pada Gambar 1.2.
+Dengan menggunakan skenario yang berbeda dan menghasilkan nilai NDCG yang berbeda tentunya menghasilkan rekomendasi yang berbeda pula. Hasil dari rekomendasi dapat dilihat pada Gambar 1.1.
 
-![Gambar 1.2](Gambar/rekemendasi.png)  
-*Gambar 1.2*
+![Gambar 1.1](Gambar/rekemendasi.png)  
+*Gambar 1.1*
 
 Dapat dilihat bahwa tidak ada satupun rekomendasi film yang sama untuk *user* dengan *User_ID* 1333. Dengan melihat hasil NDCG pada Gambar 1.1 tetntunya rekomendasi yang dihasilkan dengan menggunakan *SVD+UB* lebih baik untuk digunakan.
 
@@ -116,10 +116,10 @@ Matriks yang digunakan untuk membandingkan kinerja dari kedua skenario tersebut 
 
 **Hasil NDCG**:
 
-![Gambar 1.1](Gambar/download.png)  
-*Gambar 1.1*
+![Gambar 1.2](Gambar/download.png)  
+*Gambar 1.2*
 
-Pada Gambar 1.1 dapat dilihat bahwa garis biru menunjukkan nilai *NDCG* metode *SVD+UB*, sedangkan garis orange menunjukkan nilai *NDCG* metode UB (tanpa *SVD*). Dapat dilihat bahwa di semua user yang memperoleh rekomendasi, metode *SVD+UB* memiliki nilai *NDCG* yang lebih baik dibandingkan dengan UB (tanpa *SVD*). 
+Pada Gambar 1.2 dapat dilihat bahwa garis biru menunjukkan nilai *NDCG* metode *SVD+UB*, sedangkan garis orange menunjukkan nilai *NDCG* metode UB (tanpa *SVD*). Dapat dilihat bahwa di semua user yang memperoleh rekomendasi, metode *SVD+UB* memiliki nilai *NDCG* yang lebih baik dibandingkan dengan UB (tanpa *SVD*). 
 
 Hal ini menunjukkan bahwa metode *SVD* dengan mengubah data menjadi 3 matriks dengan nilai laten mampu menyelesaikan masalah *sparsity* dan *scalability*. Hal ini berati juga sudah menjawab *Problem Statements*, mencapai *Goals* yang diinginkan serta *Solution Statements* yang diberikan mampu berdampak lebih baik pada permasalah sparsity* dan *scalability*.
 
