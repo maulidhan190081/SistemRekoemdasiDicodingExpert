@@ -98,6 +98,18 @@ Metode yang digunakan untuk menyelesaikan masalah *sparsity* dan *scalability* a
 
 Pemilihan metode *SVD* didasarkan pada penelitian sebelumnya yang menyatakan bahwa masalah *sparsity* dan *scalability* dapat diselesaikan dengan metode *SVD* ([Zhou et al., 2017](https://ieeexplore.ieee.org/document/8325026)).
 
+**Hasil Rekomendasi**
+
+Dengan menggunakan skenario yang berbeda dan menghasilkan nilai NDCG yang berbeda tentunya menghasilkan rekomendasi yang berbeda pula. Hasil dari rekomendasi dapat dilihat pada Gambar 1.2.
+
+![Gambar 1.2](Gambar/rekemendasi.png)  
+*Gambar 1.2*
+
+Dapat dilihat bahwa tidak ada satupun rekomendasi film yang sama untuk *user* dengan *User_ID* 1333. Dengan melihat hasil NDCG pada Gambar 1.1 tetntunya rekomendasi yang dihasilkan dengan menggunakan *SVD+UB* lebih baik untuk digunakan.
+
+
+## Evaluation
+
 **NDCG**
 
 Matriks yang digunakan untuk membandingkan kinerja dari kedua skenario tersebut adalah matriks *NDCG*. Matriks *NDCG* adalah matriks yang menghitung akurasi dari rekomendasi yang dihasilkan oleh kedua skenario. Semakin tinggi nilai *NDCG*-nya, maka semakin baik metode yang digunakan.
@@ -110,17 +122,6 @@ Matriks yang digunakan untuk membandingkan kinerja dari kedua skenario tersebut 
 Pada Gambar 1.1 dapat dilihat bahwa garis biru menunjukkan nilai *NDCG* metode *SVD+UB*, sedangkan garis orange menunjukkan nilai *NDCG* metode UB (tanpa *SVD*). Dapat dilihat bahwa di semua user yang memperoleh rekomendasi, metode *SVD+UB* memiliki nilai *NDCG* yang lebih baik dibandingkan dengan UB (tanpa *SVD*). 
 
 Hal ini menunjukkan bahwa metode *SVD* dengan mengubah data menjadi 3 matriks dengan nilai laten mampu menyelesaikan masalah *sparsity* dan *scalability*. Hal ini berati juga sudah menjawab *Problem Statements*, mencapai *Goals* yang diinginkan serta *Solution Statements* yang diberikan mampu berdampak lebih baik pada permasalah sparsity* dan *scalability*.
-
-## Evaluation
-
-**Hasil Rekomendasi**
-
-Dengan menggunakan skenario yang berbeda dan menghasilkan nilai NDCG yang berbeda tentunya menghasilkan rekomendasi yang berbeda pula. Hasil dari rekomendasi dapat dilihat pada Gambar 1.2.
-
-![Gambar 1.2](Gambar/rekemendasi.png)  
-*Gambar 1.2*
-
-Dapat dilihat bahwa tidak ada satupun rekomendasi film yang sama untuk *user* dengan *User_ID* 1333. Dengan melihat hasil NDCG pada Gambar 1.1 tetntunya rekomendasi yang dihasilkan dengan menggunakan *SVD+UB* lebih baik untuk digunakan.
 
 ### Cara Metrik Bekerja
 
